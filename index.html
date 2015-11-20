@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.table,sap.ui.commons"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"com.zhenergy.task": "./"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+				sap.ui.localResources("view");
+				var app = new sap.m.App({initialPage:"idPageXml"});
+				var page = sap.ui.view({id:"idPageXml", viewName:"com.zhenergy.task.view.PageXml", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");
+				// //配置服务器
+				 var sServiceUrl = "/sap/opu/odata/sap/ZHR_TASK_SRV/";
+                 var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, true);
+                 sap.ui.getCore().setModel(oModel);
+		</script>
+		
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

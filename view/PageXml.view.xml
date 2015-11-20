@@ -1,0 +1,79 @@
+<core:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.suite.ui.commons" 
+	controllerName="com.zhenergy.task.view.PageXml" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="待办概览" id="pageTitle">
+		<content>
+		<TileContainer
+			id="container"
+			height="70%"
+            >
+			<StandardTile 
+			    id= "create_01"
+				title= "就绪"
+                icon= "sap-icon://create"
+                number="{Result}"
+                info=""
+                type="Monitor"
+                infoState="None"
+                >
+                <customData>
+					<core:CustomData key="targetPage" value="pageConsultantTask">
+					</core:CustomData>
+				</customData>
+			</StandardTile>
+			<StandardTile 
+			    id="baoliu_02"
+				title= "已保留"
+                icon= "sap-icon://activate"
+                number="{Result}"
+                info=""
+                type="Monitor"
+                infoState="None"
+                >
+                <customData>
+					<core:CustomData key="targetPage" value="pageConsultantTask">
+					</core:CustomData>
+				</customData>
+			</StandardTile>
+			<StandardTile
+			    id= "jingxingzhong_03"
+				title= "进行中"
+                icon= "sap-icon://process"
+                number="{Result}"
+                info=""
+                type="Monitor"
+                infoState="None"
+                >
+                <customData>
+					<core:CustomData key="targetPage" value="pageConsultantTask">
+					</core:CustomData>
+				</customData>
+			</StandardTile>
+			<StandardTile 
+			    id="wancheng_04"
+				title= "已完成"
+                icon= "sap-icon://message-success"
+                number="{Result}"
+                info=""
+                type="Monitor"
+                infoState="None"
+                >
+                <customData>
+					<core:CustomData key="targetPage" value="pageConsultantTask">
+					</core:CustomData>
+				</customData>
+			</StandardTile>
+			</TileContainer>
+			<!--<Button press="handleNavOnSelect" text="由此进入待办列表>>>"/>-->
+			<Link
+			    id="link_task"
+				text="由此进入待办列表>>>"
+				press="handleNavOnSelect" />
+		</content>
+	</Page>
+</core:View>

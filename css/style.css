@@ -1,0 +1,28 @@
+/*.pageTitle{*/
+/*    font-size: 30px;*/
+/*    font-family: 微软雅黑;*/
+/*    color:red;*/
+/*}*/
+#idPageXml--pageTitle-title{
+    font-size: 30px;
+    font-family: 微软雅黑;
+
+}
+#idPageXml--create_01>.sapMTileContent>.sapMStdTileMonitorType{
+    background-color:rgb(1,192,239);
+}
+#idPageXml--baoliu_02>.sapMTileContent>.sapMStdTileMonitorType{
+    background-color:rgb(0,166,90);
+}
+#idPageXml--jingxingzhong_03>.sapMTileContent>.sapMStdTileMonitorType{
+    background-color:rgb(243,156,17);
+}
+#idPageXml--wancheng_04>.sapMTileContent>.sapMStdTileMonitorType{
+    background-color:rgb(220,75,57);
+}
+#idPageXml--pageTitle-cont{
+        text-align: center;
+}
+#idPageXml--link_task{
+    font-size:25px;
+}
